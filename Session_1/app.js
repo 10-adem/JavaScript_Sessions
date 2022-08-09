@@ -64,8 +64,8 @@ console.log(num1,num2);
 }
 
 
-let num5= 680
-;
+let num6 = 690;
+console.log(num6);
 
 // num2 = num2 + 3;
 //  console.log(num6);
