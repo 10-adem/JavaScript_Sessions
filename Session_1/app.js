@@ -48,3 +48,24 @@ const otherstudent = student;
 otherstudent.name = 'Dan';
 console.log(student);
 console.log(otherstudent);
+
+let num1 = 501;
+
+let num2= 667;
+
+num2= num2 + 3;
+
+num1 = num2;
+
+console.log(num1,num2);
+
+{let num6 = 501;
+    console.log(num6);
+}
+
+
+let num5= 680
+;
+
+// num2 = num2 + 3;
+//  console.log(num6);
