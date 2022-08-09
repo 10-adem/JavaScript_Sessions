@@ -25,11 +25,46 @@ console.log('App js Running')
 
 // console.log(typeof typeof 42)
 
-let age;
+// let age;
 
-console.log(age);
+// console.log(age);
 
 
-console.log(myAge);
-var myAge = 40;
-console.log('Hello');
+// console.log(myAge);
+
+// var myAge = 40;
+
+// console.log('Hello');
+
+// let a =null
+
+// console.log(typeof a)
+
+// let x;
+
+// do {
+//     x = prompt('Enter a number: ');
+// }while (isNaN(x));
+
+// console.log(x, x*x)
+
+// console.log('12' === 12)
+
+// let x = 1234565789012345
+
+// let y = 12345657890123457777777
+
+// let z = 0.127464746474748
+
+// let zz = 0.12657484903039948585798989
+
+// console.log(x)
+
+// console.log(y)
+
+// console.log(z)
+
+// console.log(zz)
+
+let g= 0.1 + 0.2
+console.log(+g.toFixed(2))
