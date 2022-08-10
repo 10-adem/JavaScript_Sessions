@@ -10,6 +10,17 @@ console.log('App js Running')
 // a = 8;
 // console.log(a);
 
+var a = 5;
+console.log(a);
+
+{
+ var a=4;
+  console.log(a);
+}
+
+
+console.log(a);
+
 // console.log(typeof 0);
 // console.log(typeof 3.14);
 // console.log(typeof 'hello');
