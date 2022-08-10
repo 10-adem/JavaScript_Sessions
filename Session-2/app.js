@@ -1,115 +1,134 @@
 console.log('App js Running')
 
-let a = 5;
-console.log(a);
+// let a = 5;
+// console.log(a);
 
-{
-    let a=3;
-    console.log(a);
-}
+// {
+//     let a=4;
+//     console.log(a);
+// }
+// a = 8;
+// console.log(a);
 
-a = 6;
-console.log(a);
+// console.log(typeof 0);
+// console.log(typeof 3.14);
+// console.log(typeof 'hello');
+// console.log(typeof (8 > 10));
+// console.log((8 > 10));
+// console.log(typeof ' ');
+// console.log(typeof '');
+// console.log(typeof 3,144);
 
-console.log(typeof 0);
-console.log(typeof 3.14);
-console.log(typeof 'hello');
-console.log(typeof (8 > 10));
-console.log((8 > 10));
-console.log(typeof ' ');
-console.log(typeof '');
+// let b = prompt('Enter your name');
 
-let b = prompt('Enter your name');
+// console.log(b, typeof b)
 
-console.log(b, typeof b)
+// console.log(typeof typeof 42)
 
-console.log(typeof typeof 42)
+// let age;
 
-let age;
+// console.log(age);
 
-console.log(age);
+// console.log(myAge);
 
+// var myAge = 40;
 
-console.log(myAge);
+// console.log('Hello');
 
-var myAge = 40;
+// let l =null
 
-console.log('Hello');
+// console.log(typeof l)
 
-let a =null
+// let x;
+// let q;
 
-console.log(typeof a)
+// do {
+//     x = prompt('Enter a number: ');
+//     q = prompt('Enter your number: ');
+// }while ((isNaN(x)),(isNaN(q)));
 
-let x;
+// console.log('x*q =', x*q);
+// console.log(x*x);
+// console.log(x, )
 
-do {
-    x = prompt('Enter a number: ');
-}while (isNaN(x));
+// console.log('11' > 12)
+// console.log('12' > 12)
+// console.log('12' == 12)
+// console.log('12' === 12)
+// console.log(12 === 12)
 
-console.log(x, x*x)
+// == Boolean mantıksal olarak bunlar farklı tipte olsa da aynı değer de diyerek karşılaştırdığında true veriyor.
+// === Boolean ise tiplerine de bakarak karşılaştıdığı için false veya true veriyor.
 
-console.log('12' === 12)
+// let xx = 1234565789012345
 
-let x = 1234565789012345
+// let y = 12345657890123457777777
 
-let y = 12345657890123457777777
+// let z = 0.127464746474748
 
-let z = 0.127464746474748
+// let zz = 0.12657484903039948585798989
 
-let zz = 0.12657484903039948585798989
+// console.log(xx)
 
-console.log(x)
+// console.log(y)
 
-console.log(y)
+// console.log(z)
 
-console.log(z)
+// console.log(zz)
 
-console.log(zz)
+// let g= 0.1 + 0.2
+// console.log(g.toFixed(2));
+// console.log(typeof(g.toFixed(2)));
 
-let g= 0.1 + 0.2
-console.log(+g.toFixed(2))
+// console.log(g.toFixed(2));
 
-let h = 1_000_000_000
-console.log(h)
+// console.log(typeof(+g.toFixed(2)));
 
-let i = 'This is a\' string';
-let j = "This is a string";
-let k = `This is a string`;
+// let h = 1_000_000_000
+// console.log(h)
 
-console.log(i, typeof i)
-console.log(j, typeof j)
-console.log(k, typeof k)
+// let hH = 10_000_000_000
+// console.log(hH)
 
-let userName = 'Adam';
+// let i = 'This is a\' string';
+// let j = "This is a string";
+// let k = `This is a string`;
 
-console.log(userName,length)
+// console.log(i, typeof i)
+// console.log(j, typeof j)
+// console.log(k, typeof k)
 
-console.log('Merhaba ', userName )
+// let userName = 'Adam';
 
-console.log(`2 + 3 = ${userName}`)
+// console.log(userName,length)
 
-console.log(`2 + 3 = ${'2'+'3'}`)
+// console.log('Merhaba ', userName )
 
-console.log(`3`-2)
+// console.log(`2 + 3 = ${userName}`)
 
-let t = Boolean("false");
- console.log("t : " + t);
+// console.log(`2 + 3 = ${'2'+'3'}`)
 
- let m = ''
+// console.log(`3`-2)
 
- let n = ``
+// let t = Boolean("false");
+//  console.log("t : " + t);
 
- let p = 0
+//  let m = ''
 
- console.log(Boolean(m))
- console.log(Boolean(n))
- console.log(Boolean(p))
- console.log(Boolean(3 > 5))
- console.log(Boolean(3 > 2))
- console.log(Boolean(3 == 2))
- console.log(Boolean(3 == 3))
- console.log(Boolean(3 == `3`))
- console.log(Boolean(3 === `3`))
+//  let n = ``
+
+//  let p = 0
+
+//  console.log(Boolean(m))
+//  console.log(Boolean(n))
+//  console.log(Boolean(p))
+//  console.log(Boolean(3 > 5))
+//  console.log(Boolean(3 > 2))
+//  console.log(Boolean(3 == 2))
+//  console.log(Boolean(3 == 3))
+//  console.log(Boolean(3 == `3`))
+//  console.log(Boolean(3 === `3`))
+//  console.log(Boolean(3 === 3))
 
 const myCar ={
     make : 'ford',
@@ -120,6 +139,7 @@ const myCar ={
 
 console.log(myCar)
 
+// var myCar.make= 'merc'
 myCar.color = 'green'
 console.log(myCar)
 
