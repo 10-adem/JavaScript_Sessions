@@ -10,11 +10,22 @@ console.log('App js Running')
 // a = 8;
 // console.log(a);
 
-var a = 5;
+// var a = 5;
+// console.log(a);
+
+// {
+//  var a=4;
+//   console.log(a);
+// }
+
+
+// console.log(a);
+
+let a = 5;
 console.log(a);
 
 {
- var a=4;
+  a=4;
   console.log(a);
 }
 
