@@ -29,23 +29,21 @@ console.log('App js Running')
 
 // console.log(`Area of ​​a circle of radius ${radius} : ${π*(radius*radius)}`);
 
-
+// Fahranheit - Celsius
 // let F = +prompt('Enter to °F : ');
 // console.log(`${F} °F equals ${(5*(F-32))/9} °C`);
 
 // let C = +prompt('Enter to °C: ');
 // console.log(`${C} °C equals ${(9*C+(32*5))/5} °F`);
 
-// const today = new Date();
-// console.log(today);
+// Today
+const today = new Date();
+console.log(`Today: ${today}`);
 
-// console.log(`Yıl ${today.getFullYear()}`);
-// console.log(`Ay ${today.getMonth()+1}`);
-// console.log(`Gün ${today.getDate()}`);
-
-// console.log(`Day of the month is ${now.getDate()}`);
-// console.log(`Month is ${now.getMonth()}`);
-// console.log(`Year is ${now.getFullYear()}`);
+console.log(`Year: ${today.getFullYear()}`);
+console.log(`Month: ${today.getMonth()+1}`); 
+console.log(`Day: ${today.getDate()}`);
+// console.log(`Hours: ${today.getUTCHours()}`);
 
 // let num8 = +prompt('Enter first num: ')%10;
 // let num9 = +prompt('Enter second num: ')%10;
