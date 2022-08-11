@@ -37,23 +37,19 @@ console.log('App js Running')
 // console.log(`${C} °C equals ${(9*C+(32*5))/5} °F`);
 
 // Today
-const today = new Date();
-console.log(`Today: ${today}`);
+// const today = new Date();
+// console.log(`Today: ${today}`);
 
-console.log(`Year: ${today.getFullYear()}`);
-console.log(`Month: ${today.getMonth()+1}`); 
-console.log(`Day: ${today.getDate()}`);
+// console.log(`Year: ${today.getFullYear()}`);
+// console.log(`Month: ${today.getMonth()+1}`); 
+// console.log(`Day: ${today.getDate()}`);
 // console.log(`Hours: ${today.getUTCHours()}`);
 
-// let num8 = +prompt('Enter first num: ')%10;
-// let num9 = +prompt('Enter second num: ')%10;
-// let num10 = +prompt('Enter third num: ')%10;
 
-// console.log(`3 sayıdan en az ikisinin birler basamağı eşittir: ${(num8==num9)||(num8==num10)||(num9==num10)}`)
+// At least two of these 3 numbers have the same ones digit
 
+let num8 = +prompt('Enter first num: ')%10;
+let num9 = +prompt('Enter second num: ')%10;
+let num10 = +prompt('Enter third num: ')%10;
 
-// let num1=+prompt(`first number`)%10;
-// let num2=+prompt(`second number`)%10;
-// let num3=+prompt(`third number`)%10;
-
-// console.log((num1==num2)||(num1==num3)||(num2==num3))
+console.log(`At least two of these 3 numbers have the same ones digit: ${(num8==num9)||(num8==num10)||(num9==num10)}`)
