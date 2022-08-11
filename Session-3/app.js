@@ -23,10 +23,11 @@ console.log('App js Running')
 
 // console.log(`Area of Rentangle=${side1*side2}`);
 
-//  Daire Yarıçap
-// let side3 = prompt('Enter first side: ');
+//  Area of ​​the circle
+// let radius = +prompt('Enter radius: ');
+// let π = 3.1415
 
-// console.log(3.14*(side3*side3));
+// console.log(`Area of ​​a circle of radius ${radius} : ${π*(radius*radius)}`);
 
 
 // let F = +prompt('Enter first side: ');
