@@ -30,13 +30,11 @@ console.log('App js Running')
 // console.log(`Area of ​​a circle of radius ${radius} : ${π*(radius*radius)}`);
 
 
-// let F = +prompt('Enter first side: ');
+// let F = +prompt('Enter to °F : ');
+// console.log(`${F} °F equals ${(5*(F-32))/9} °C`);
 
-// console.log((5*(F-32))/9);
-
-//  let C = prompt('Enter first side: ');
-//  console.log(`${C} (9*C+(32*5))/5`);
-
+// let C = +prompt('Enter to °C: ');
+// console.log(`${C} °C equals ${(9*C+(32*5))/5} °F`);
 
 // const today = new Date();
 // console.log(today);
