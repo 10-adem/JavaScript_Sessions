@@ -49,8 +49,8 @@ console.log('App js Running')
 
 // At least two of these 3 numbers have the same ones digit
 
-// let num8 = +prompt('Enter first num: ')%10;
-// let num9 = +prompt('Enter second num: ')%10;
-// let num10 = +prompt('Enter third num: ')%10;
+let num8 = +prompt('Enter first num: ')%10;
+let num9 = +prompt('Enter second num: ')%10;
+let num10 = +prompt('Enter third num: ')%10;
 
-// console.log(`At least two of these 3 numbers have the same ones digit: ${(num8==num9)||(num8==num10)||(num9==num10)}`)
+console.log(`At least two of these 3 numbers have the same ones digit: ${(num8==num9)||(num8==num10)||(num9==num10)}`)
