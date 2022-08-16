@@ -43,3 +43,6 @@ console.log(`${enBuyuk} en buyuktur`);
 const not = +prompt("Notunuzu giriniz:")
 let sonuc = not >= 50 ? "Gecti"  : "Kaldi";
 console.log(sonuc);
+
+const not = +prompt("Notunuzu giriniz:")
+console.log(not >= 50 ? "Gecti"  : "Kaldi");
