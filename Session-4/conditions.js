@@ -18,9 +18,9 @@ console.log("*****CONDITIONS*****")
 
 //? console dan 3 tane tamsayi alarak en büyüğünü bulan
 
-const n1 = prompt("sayi1:")
-const n2 = prompt("sayi2:")
-const n3 = prompt("sayi3:")
+const n1 = +prompt("sayi1:")
+const n2 = +prompt("sayi2:")
+const n3 = +prompt("sayi3:")
 
 if(n1>=n2 && n1>=n3){
     console.log(`${n1} en buyuk sayidir.`);
