@@ -48,3 +48,5 @@ console.log(sonuc);
 
 const not = +prompt("Notunuzu giriniz:")
 console.log(not >= 50 ? "Gecti"  : "Kaldi");
+
+yas >= 18 && cinsiyet === "erkek" && saglikli ? console.log("askerlik yapmali") : console.log("Askerlik yapmasına gerek yok");
