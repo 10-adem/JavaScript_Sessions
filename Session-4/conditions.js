@@ -40,6 +40,8 @@ if (n3 >= enBuyuk) {
 }
 console.log(`${enBuyuk} en buyuktur`);
 
+//TERNARY
+
 const not = +prompt("Notunuzu giriniz:")
 let sonuc = not >= 50 ? "Gecti"  : "Kaldi";
 console.log(sonuc);
