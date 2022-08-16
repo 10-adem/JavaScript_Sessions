@@ -39,3 +39,7 @@ if (n3 >= enBuyuk) {
     enBuyuk = n3;
 }
 console.log(`${enBuyuk} en buyuktur`);
+
+const not = +prompt("Notunuzu giriniz:")
+let sonuc = not >= 50 ? "Gecti"  : "Kaldi";
+console.log(sonuc);
