@@ -24,18 +24,28 @@ console.log("*****FOR*****");
 //Asal Sayı
 //Bayrak Modeliyle Çözüldü
 
-const number = +prompt("Enter a number")
-let asal = true;
+// const number = +prompt("Enter a number")
+// let asal = true;
 
-if( number <= 1 ){
-    alert("Enter a number greater than 1");
-}else{
-    for(let i = 2 ; i< number ; i++){
-        if (number % i === 0){
-            asal = false;
-            break;
-        } 
-    }
-    const sonuc = asal === true ? "Asaldır" : "Asal Degıldır";
-    console.log(`${number} ${sonuc}`)
+// if( number <= 1 ){
+//     alert("Enter a number greater than 1");
+// }else{
+//     for(let i = 2 ; i< number ; i++){
+//         if (number % i === 0){
+//             asal = false;
+//             break;
+//         } 
+//     }
+//     const sonuc = asal === true ? "Asaldır" : "Asal Degıldır";
+//     console.log(`${number} ${sonuc}`)
+// }
+
+//WHILE
+
+let number = +prompt("Enter a number")
+
+while( number < 0 || number > 100){
+    console.log("number 0-100 should be between");
+    number = +prompt("Please enter a number")
 }
+console.log("You entered number:", number);
