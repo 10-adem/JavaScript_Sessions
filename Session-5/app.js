@@ -42,10 +42,28 @@ console.log("*****FOR*****");
 
 //WHILE
 
-let number = +prompt("Enter a number")
+// let number = +prompt("Enter a number")
 
-while( number < 0 || number > 100){
-    console.log("number 0-100 should be between");
-    number = +prompt("Please enter a number")
+// while( number < 0 || number > 100){
+//     console.log("number 0-100 should be between");
+//     number = +prompt("Please enter a number")
+// }
+// console.log("You entered number:", number);
+
+//DO WHILE
+//? ORNEK: Kullanicidan 0-100 arasinda bir not isteyen ve girilen not
+//? 0-100'den farkli ise Kullaciniyi uyararak yeniden 0-100 arasinda
+//? not girmeye zorlayan kodu do-while dongusu ile yaziniz
+
+
+let number;
+do{ 
+    number = +prompt("Enter a number")
+    if (number < 0 || number){console.log("number 0-100 should be between");
+    }
+}while( number < 0 || number > 100){
+    // console.log("number 0-100 should be between");
+    // number = +prompt("Please enter a number");
 }
+
 console.log("You entered number:", number);
