@@ -16,7 +16,26 @@ console.log("*****FOR*****");
 //* Math.round() => degerine gore yuvarlar.
 //* Math.trunc() => kesirli sayinin tam kismini alir.
 
-for(let i = 1 ;i <= 10; i++){
-    const rastgele = Math.round(Math.random()*10);
-    console.log(rastgele);
+// for(let i = 1 ;i <= 10; i++){
+//     const rastgele = Math.round(Math.random()*10);
+//     console.log(rastgele);
+// }
+
+//Asal Sayı
+//Bayrak Modeliyle Çözüldü
+
+const number = +prompt("Enter a number")
+let asal = true;
+
+if( number <= 1 ){
+    alert("Enter a number greater than 1");
+}else{
+    for(let i = 2 ; i< number ; i++){
+        if (number % i === 0){
+            asal = false;
+            break;
+        } 
+    }
+    const sonuc = asal === true ? "Asaldır" : "Asal Degıldır";
+    console.log(`${number} ${sonuc}`)
 }
