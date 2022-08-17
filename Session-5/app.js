@@ -74,6 +74,22 @@ console.log("*****FOR*****");
 let hak = 5;
 const rastgele = Math.round(Math.random()*100);
 console.log(rastgele);
+
+let tahmin;
 do{
     const tahmin = +prompt("Lutfen 0-100 arasında bir tahmin giriniz")
-}while();
+    hak -=1;
+    if(tahmin === rastgele){
+        console.log(`Tebrikler ${5 -hak} defada bildiniz.`);
+        break;
+    }else if(tahmin < rastgele){
+        console.log("ARTTIR ");
+    }else{
+        console.log("AZALT");
+    }
+}while(hak > 0);
+
+
+if (tahmin !== rastgele){
+    console.log("Uzgunuz oyunu kaybettiniz");
+}
