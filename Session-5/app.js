@@ -56,14 +56,15 @@ console.log("*****FOR*****");
 //? not girmeye zorlayan kodu do-while dongusu ile yaziniz
 
 
-let number;
-do{ 
-    number = +prompt("Enter a number")
-    if (number < 0 || number){console.log("number 0-100 should be between");
-    }
-}while( number < 0 || number > 100){
-    // console.log("number 0-100 should be between");
-    // number = +prompt("Please enter a number");
-}
+// let number;
+// do{ 
+//     number = +prompt("Enter a number")
+//     if (number < 0 || number){console.log("number 0-100 should be between");
+//     }
+// }while( number < 0 || number > 100){
+//     // console.log("number 0-100 should be between");
+//     // number = +prompt("Please enter a number");
+// }
 
-console.log("You entered number:", number);
+// console.log("You entered number:", number);
+
