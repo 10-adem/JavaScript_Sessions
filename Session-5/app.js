@@ -181,18 +181,66 @@ console.log("*****FOR*****");
    
     // }while(again)
 
-            again = prompt("Enter note : 0-100");
-            if(again === "Y"){
-                again = 1
-                due = 5
-                console.log(3)
+            // again = prompt("Enter note : 0-100");
+            // if(again === "Y"){
+            //     again = 1
+            //     due = 5
+            //     console.log(3)
                 
-            }else if(again === "y"){
-                again = 1
-                due = 5
-                console.log(4)
-            }
-            else{
-                again=0
-                console.log("GoodLuck");
-            }
+            // }else if(again === "y"){
+            //     again = 1
+            //     due = 5
+            //     console.log(4)
+            // }
+            // else{
+            //     again=0
+            //     console.log("GoodLuck");
+            // }
+
+
+// const n = +prompt("Enter number or Q or q")
+let toplam = 0;
+let adet = 0;
+let tekrar = true;
+
+do{
+    const n = prompt("Enter number or Q or q")
+    if(n === "Q"){
+        tekrar = false;
+        break
+        console.log(tekrar)
+    }else if(n === "q"){
+        tekrar = false;
+        break
+    }else{
+        toplam += n;
+        adet += 1;
+        console.log(9)
+
+    }console.log(tekrar)
+
+}while(tekrar)
+    console.log(`${toplam/adet}`)
+
+
+//     f(let i = 1; i <= n; i++){
+//     toplam += i;
+//     console.log(toplam, i);
+//  }
+// console.log("SONUC", toplam);
+
+//  again = prompt("Enter note : 0-100");
+//  if(again === "Y"){
+//     again = 1
+//     due = 5
+//     console.log(3)
+                
+//     }else if(again === "y"){
+//     again = 1
+//     due = 5
+//     console.log(4)
+//     }
+//     else{
+//     again=0
+//     console.log("GoodLuck");
+//  }
