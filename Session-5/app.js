@@ -97,48 +97,51 @@ console.log("*****FOR*****");
 
 //Assigmen-2
 
-// let due = 5;
-// const randomNumber = Math.round(Math.random()*100);
-// console.log(randomNumber);
-// let prediction;
-let again;
+let due = 5;
+const randomNumber = Math.round(Math.random()*100);
+console.log(randomNumber);
+let prediction;
+let again2 = 1
 
-// do{
-// do{
-//     prediction = +prompt("Please enter a guess between 0-100");
-//     due -= 1;
-//     if(prediction === randomNumber){
-//         console.log(`Congratulations, you know ${5 - due} times.`);
-//         break;
-//     }else if(prediction < randomNumber){
-//         console.log("increase ⬆️");
-//     }else{
-//         console.log("decrease ⬇️");
-//     }
+do{
+do{
+    prediction = +prompt("Please enter a guess between 0-100");
+    due -= 1;
+    if(prediction === randomNumber){
+        console.log(`Congratulations, you know ${5 - due} times.`);
+        break;
+    }else if(prediction < randomNumber){
+        console.log("increase ⬆️");
+    }else{
+        console.log("decrease ⬇️");
+    }
 
-// }while(due > 0);
+}while(due > 0);
 
-// if (prediction !== randomNumber){
-//      console.log("Sorry you lost the game");
-// }
+if (prediction !== randomNumber){
+     console.log("Sorry you lost the game");
+}
 
-//     again = prompt("Do you want to play again : Y/N");
-//     if(again == "Y" || "y"){
-//         again = 1
-//         due = 5
-//     }else{
-//         again = 0
-//     }
-
-// }while("")
     let Y = 1;
     let y = 1;
     again = prompt("Do you want to play again : Y/N");
-    if(again === Y || y){
-         again = 1
+    if(again2 === again){
+         again2 = 1
          due = 5
     }else{
-        again = 0
+        again2 = 0
     }
-    console.log(again)
+    console.log(again2)
+
+}while(again2)
+    // let Y = 1;
+    // let y = 1;
+    // again = prompt("Do you want to play again : Y/N");
+    // if(again2 === again){
+    //      again2 = 1
+    //      due = 5
+    // }else{
+    //     again2 = 0
+    // }
+    // console.log(again2)
 
