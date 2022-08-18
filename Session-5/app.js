@@ -71,25 +71,59 @@ console.log("*****FOR*****");
 
 //* Program 0*100 arasında rasgele bir sayı tutacak ve kullanıcının bu sayıyı 5 kere(hak) de bilmesini isteyecektir. Her yanlışta hakkını bir düşürecek ve ARTTIR/AZALT diyerek kullanıcıyı yönlendirecektir.Sonuç olarak kullanıcının hakkı 0 olursa "Üzgünüz bilemediniz" eğer bildi ise "Tebrikler ... denemede bildiniz" yazacaktır.
 
-let hak = 5;
-const rastgele = Math.round(Math.random()*100);
-console.log(rastgele);
+// let hak = 5;
+// const rastgele = Math.round(Math.random()*100);
+// console.log(rastgele);
 
-let tahmin;
+// let tahmin;
+// do{
+//     const tahmin = +prompt("Lutfen 0-100 arasında bir tahmin giriniz")
+//     hak -=1;
+    // if(tahmin === rastgele){
+    //     console.log(`Tebrikler ${5 -hak} defada bildiniz.`);
+    //     break;
+    // }else if(tahmin < rastgele){
+    //     console.log("ARTTIR ");
+    // }else{
+    //     console.log("AZALT");
+    // }
+// }while(hak > 0);
+
+
+// if (tahmin !== rastgele){
+//     console.log("Uzgunuz oyunu kaybettiniz");
+// }
+
+
+//Assigmen-2
+
+let due = 5;
+const randomNumber = Math.round(Math.random()*100);
+console.log(randomNumber);
+let prediction;
+
+
 do{
-    const tahmin = +prompt("Lutfen 0-100 arasında bir tahmin giriniz")
-    hak -=1;
-    if(tahmin === rastgele){
-        console.log(`Tebrikler ${5 -hak} defada bildiniz.`);
+do{
+    prediction = +prompt("Please enter a guess between 0-100");
+    due -= 1;
+    if(prediction === randomNumber){
+        console.log(`Congratulations, you know ${5 - due} times.`);
         break;
-    }else if(tahmin < rastgele){
-        console.log("ARTTIR ");
+    }else if(prediction < randomNumber){
+        console.log("increase ⬆️");
     }else{
-        console.log("AZALT");
+        console.log("decrease ⬇️");
     }
-}while(hak > 0);
 
+}while(due > 0);
 
-if (tahmin !== rastgele){
-    console.log("Uzgunuz oyunu kaybettiniz");
+if (prediction !== randomNumber){
+     console.log("Sorry you lost the game");
 }
+
+}while( (let continue = prompt("Do you want to play again: Y/N")) 
+)
+
+    
+
