@@ -101,7 +101,7 @@ let due = 5;
 const randomNumber = Math.round(Math.random()*100);
 console.log(randomNumber);
 let prediction;
-let again2 = 1
+let again;
 
 do{
 do{
@@ -122,18 +122,26 @@ if (prediction !== randomNumber){
      console.log("Sorry you lost the game");
 }
 
-    let Y = 1;
-    let y = 1;
+    
     again = prompt("Do you want to play again : Y/N");
-    if(again2 === again){
-         again2 = 1
-         due = 5
+    if(again === "Y" || "y"){
+        again = 1
+        due = 5
+        
     }else{
-        again2 = 0
+        again=0
     }
-    console.log(again2)
+   
+    // let y = 1;
+    // if(again2 === again){
+    //      again2 = 1
+    //      due = 5
+    // }else{
+    //     again2 = 0
+    // }
+    // console.log(again2)
 
-}while(again2)
+}while(again)
     // let Y = 1;
     // let y = 1;
     // again = prompt("Do you want to play again : Y/N");
