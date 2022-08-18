@@ -97,33 +97,48 @@ console.log("*****FOR*****");
 
 //Assigmen-2
 
-let due = 5;
-const randomNumber = Math.round(Math.random()*100);
-console.log(randomNumber);
-let prediction;
+// let due = 5;
+// const randomNumber = Math.round(Math.random()*100);
+// console.log(randomNumber);
+// let prediction;
+let again;
 
+// do{
+// do{
+//     prediction = +prompt("Please enter a guess between 0-100");
+//     due -= 1;
+//     if(prediction === randomNumber){
+//         console.log(`Congratulations, you know ${5 - due} times.`);
+//         break;
+//     }else if(prediction < randomNumber){
+//         console.log("increase ⬆️");
+//     }else{
+//         console.log("decrease ⬇️");
+//     }
 
-do{
-do{
-    prediction = +prompt("Please enter a guess between 0-100");
-    due -= 1;
-    if(prediction === randomNumber){
-        console.log(`Congratulations, you know ${5 - due} times.`);
-        break;
-    }else if(prediction < randomNumber){
-        console.log("increase ⬆️");
+// }while(due > 0);
+
+// if (prediction !== randomNumber){
+//      console.log("Sorry you lost the game");
+// }
+
+//     again = prompt("Do you want to play again : Y/N");
+//     if(again == "Y" || "y"){
+//         again = 1
+//         due = 5
+//     }else{
+//         again = 0
+//     }
+
+// }while("")
+    let Y = 1;
+    let y = 1;
+    again = prompt("Do you want to play again : Y/N");
+    if(again === Y || y){
+         again = 1
+         due = 5
     }else{
-        console.log("decrease ⬇️");
+        again = 0
     }
-
-}while(due > 0);
-
-if (prediction !== randomNumber){
-     console.log("Sorry you lost the game");
-}
-
-}while( (let continue = prompt("Do you want to play again: Y/N")) 
-)
-
-    
+    console.log(again)
 
