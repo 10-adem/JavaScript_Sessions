@@ -34,7 +34,7 @@ console.log("*****FOR*****");
 //         if (number % i === 0){
 //             asal = false;
 //             break;
-//         } 
+//         }
 //     }
 //     const sonuc = asal === true ? "Asaldır" : "Asal Degıldır";
 //     console.log(`${number} ${sonuc}`)
@@ -55,9 +55,8 @@ console.log("*****FOR*****");
 //? 0-100'den farkli ise Kullaciniyi uyararak yeniden 0-100 arasinda
 //? not girmeye zorlayan kodu do-while dongusu ile yaziniz
 
-
 // let number;
-// do{ 
+// do{
 //     number = +prompt("Enter a number")
 //     if (number < 0 || number){console.log("number 0-100 should be between");
 //     }
@@ -67,7 +66,6 @@ console.log("*****FOR*****");
 // }
 
 // console.log("You entered number:", number);
-
 
 //* Program 0*100 arasında rasgele bir sayı tutacak ve kullanıcının bu sayıyı 5 kere(hak) de bilmesini isteyecektir. Her yanlışta hakkını bir düşürecek ve ARTTIR/AZALT diyerek kullanıcıyı yönlendirecektir.Sonuç olarak kullanıcının hakkı 0 olursa "Üzgünüz bilemediniz" eğer bildi ise "Tebrikler ... denemede bildiniz" yazacaktır.
 
@@ -79,21 +77,19 @@ console.log("*****FOR*****");
 // do{
 //     const tahmin = +prompt("Lutfen 0-100 arasında bir tahmin giriniz")
 //     hak -=1;
-    // if(tahmin === rastgele){
-    //     console.log(`Tebrikler ${5 -hak} defada bildiniz.`);
-    //     break;
-    // }else if(tahmin < rastgele){
-    //     console.log("ARTTIR ");
-    // }else{
-    //     console.log("AZALT");
-    // }
+// if(tahmin === rastgele){
+//     console.log(`Tebrikler ${5 -hak} defada bildiniz.`);
+//     break;
+// }else if(tahmin < rastgele){
+//     console.log("ARTTIR ");
+// }else{
+//     console.log("AZALT");
+// }
 // }while(hak > 0);
-
 
 // if (tahmin !== rastgele){
 //     console.log("Uzgunuz oyunu kaybettiniz");
 // }
-
 
 //Assigmen-2
 
@@ -122,125 +118,90 @@ console.log("*****FOR*****");
 //      console.log("Sorry you lost the game");
 // }
 
-    
 //     again = prompt("Do you want to play again : Y/N");
 //     if(again === "Y" || "y"){
 //         again = 1
 //         due = 5
-        
+
 //     }else{
 //         again=0
 //     }
-   
-   
 
 // }while(again)
 
+// let due = 5;
+// const randomNumber = Math.round(Math.random()*100);
+// console.log(randomNumber);
+// let prediction;
+// let again;
 
-    // let due = 5;
-    // const randomNumber = Math.round(Math.random()*100);
-    // console.log(randomNumber);
-    // let prediction;
-    // let again;
-    
-    // do{
-    // do{
-    //     prediction = +prompt("Please enter a guess between 0-100");
-    //     due -= 1;
-    //     if(prediction === randomNumber){
-    //         console.log(`Congratulations, you know ${5 - due} times.`);
-    //         break;
-    //     }else if(prediction < randomNumber){
-    //         console.log("increase ⬆️");
-    //     }else{
-    //         console.log("decrease ⬇️");
-    //     }
-    
-    // }while(due > 0);
-    
-    // if (prediction !== randomNumber){
-    //      console.log("Sorry you lost the game");
-    // }
-    
-        
-    //     again = prompt("Do you want to play again : Y/N");
-    //     if(again === "Y"){
-    //         again = 1
-    //         due = 5
-    //         console.log(3)
-            
-    //     }else if(again === "y"){
-    //         again = 1
-    //         due = 5
-    //         console.log(4)
-    //     }
-    //     else{
-    //         again=0
-    //         console.log("GoodLuck");
-    //     }
-   
-    // }while(again)
+// do{
+// do{
+//     prediction = +prompt("Please enter a guess between 0-100");
+//     due -= 1;
+//     if(prediction === randomNumber){
+//         console.log(`Congratulations, you know ${5 - due} times.`);
+//         break;
+//     }else if(prediction < randomNumber){
+//         console.log("increase ⬆️");
+//     }else{
+//         console.log("decrease ⬇️");
+//     }
 
-            // again = prompt("Enter note : 0-100");
-            // if(again === "Y"){
-            //     again = 1
-            //     due = 5
-            //     console.log(3)
-                
-            // }else if(again === "y"){
-            //     again = 1
-            //     due = 5
-            //     console.log(4)
-            // }
-            // else{
-            //     again=0
-            //     console.log("GoodLuck");
-            // }
+// }while(due > 0);
 
+// if (prediction !== randomNumber){
+//      console.log("Sorry you lost the game");
+// }
 
-// const n = +prompt("Enter number or Q or q")
+//     again = prompt("Do you want to play again : Y/N");
+//     if(again === "Y"){
+//         again = 1
+//         due = 5
+//         console.log(3)
+
+//     }else if(again === "y"){
+//         again = 1
+//         due = 5
+//         console.log(4)
+//     }
+//     else{
+//         again=0
+//         console.log("GoodLuck");
+//     }
+
+// }while(again)
+
+// again = prompt("Enter note : 0-100");
+// if(again === "Y"){
+//     again = 1
+//     due = 5
+//     console.log(3)
+
+// }else if(again === "y"){
+//     again = 1
+//     due = 5
+//     console.log(4)
+// }
+// else{
+//     again=0
+//     console.log("GoodLuck");
+// }
+
+// const n = prompt("Enter number or Q or q")
 let toplam = 0;
 let adet = 0;
 let tekrar = true;
 
-do{
-    const n = prompt("Enter number or Q or q")
-    if(n === "Q"){
-        tekrar = false;
-        break
-        console.log(tekrar)
-    }else if(n === "q"){
-        tekrar = false;
-        break
-    }else{
-        toplam += n;
-        adet += 1;
-        console.log(9)
-
-    }console.log(tekrar)
-
-}while(tekrar)
-    console.log(`${toplam/adet}`)
-
-
-//     f(let i = 1; i <= n; i++){
-//     toplam += i;
-//     console.log(toplam, i);
-//  }
-// console.log("SONUC", toplam);
-
-//  again = prompt("Enter note : 0-100");
-//  if(again === "Y"){
-//     again = 1
-//     due = 5
-//     console.log(3)
-                
-//     }else if(again === "y"){
-//     again = 1
-//     due = 5
-//     console.log(4)
-//     }
-//     else{
-//     again=0
-//     console.log("GoodLuck");
-//  }
+do {
+  const n = prompt("Enter number or Q or q");
+  if (n === "q" || n === "Q") {
+    tekrar = false;
+    break;
+  } else {
+    toplam += +n;
+    adet += 1;
+    console.log(toplam, n);
+  }
+} while (tekrar);
+console.log(`Not Ortalaması:`, toplam / adet);
