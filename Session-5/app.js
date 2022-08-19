@@ -188,7 +188,7 @@ console.log("*****FOR*****");
 //     console.log("GoodLuck");
 // }
 
-// const n = prompt("Enter number or Q or q")
+// const n = prompt("Enter number or Q or q");
 let toplam = 0;
 let adet = 0;
 let tekrar = true;
@@ -204,4 +204,8 @@ do {
     console.log(toplam, n);
   }
 } while (tekrar);
-console.log(`Not Ortalaması:`, toplam / adet);
+if (adet > 0) {
+  console.log(`Not Ortalaması:`, toplam / adet);
+} else {
+  console.log("Sayı girmediniz, iyi günler");
+}
