@@ -189,23 +189,23 @@ console.log("*****FOR*****");
 // }
 
 // const n = prompt("Enter number or Q or q");
-let toplam = 0;
-let adet = 0;
-let tekrar = true;
+let total = 0;
+let piece = 0;
+let again = true;
 
 do {
   const n = prompt("Enter number or Q or q");
   if (n === "q" || n === "Q") {
-    tekrar = false;
+    again = false;
     break;
   } else {
-    toplam += +n;
-    adet += 1;
-    console.log(toplam, n);
+    total += +n;
+    piece += 1;
+    console.log(total, n);
   }
-} while (tekrar);
-if (adet > 0) {
-  console.log(`Not Ortalaması:`, toplam / adet);
+} while (again);
+if (piece > 0) {
+  console.log(`Grade average:`, total / piece);
 } else {
-  console.log("Sayı girmediniz, iyi günler");
+  console.log("Not enter number, have a nice day");
 }
