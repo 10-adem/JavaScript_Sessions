@@ -195,9 +195,13 @@ let again = true;
 
 do {
   const n = prompt("Enter number or Q or q");
-  if (n === "q" || n === "Q") {
-    again = false;
-    break;
+  if (isNaN(n)) {
+    if (n === "q" || n === "Q") {
+      again = false;
+      break;
+    } else {
+      alert("Please enter a Number  or Q or q");
+    }
   } else {
     total += +n;
     piece += 1;
