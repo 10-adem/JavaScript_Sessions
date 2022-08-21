@@ -1,1 +1,1 @@
-console.log("*****FOR*****");
+console.log("*****FUNC DECLARATION*****");
