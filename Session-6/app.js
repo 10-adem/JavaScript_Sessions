@@ -18,8 +18,11 @@ selamla("Can", "Yilmaz");
 selamla("Canan", "Ozturk");
 selamla("Ayşe");
 function yasHesapla(isim, dogumTarihi) {
-  const sonuc = `${isim} in yası ${new Date().getFullYear() - dogumTarihi} dir`;
-  return sonuc;
+  //   const sonuc = `${isim} in yası ${new Date().getFullYear() - dogumTarihi} dir`;
+  //   return sonuc;
+  return (sonuc = `${isim} in yası ${
+    new Date().getFullYear() - dogumTarihi
+  } dir`);
 }
 
 const mesaj1 = yasHesapla("Elif Can", 1990);
