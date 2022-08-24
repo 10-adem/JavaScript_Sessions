@@ -66,8 +66,8 @@ console.log(a.localeCompare(b, "en", { sensitiy: "base" }));
 const str6 = "Full Stack Path";
 console.log(str6.charAt(5)); //* S
 console.log(str6.charAt(4)); //* ""
-console.log(str6.chartAt()); //* F (ilk indistekini dondurur)
-console.log(str6.chartAt(14)); //* h
+console.log(str6.charAt()); //* F (ilk indistekini dondurur)
+console.log(str6.charAt(14)); //* h
 
 //! Lenght bir property (objenin degiskenidir) dir ve strign' in
 //! karakter sayisini tutar.
@@ -86,3 +86,76 @@ console.log(word.includes("to be")); //? true
 console.log(word.includes("That")); //? False
 console.log(word.includes("That")); //? False
 console.log(word.includes("")); //? False
+
+//* -----------------------------------------
+//* indexOf(), lastIndexOf(), case se
+
+//* ----------------------------------------------------------
+//* search()
+//* ----------------------------------------------------------
+
+const buyukHarf = /[A-Z]/;
+const nokta = /[.]/;
+const virgul = /[,]/;
+console.log(word.search(buyukHarf)); //? ilk buyuk harfin indeksi 0
+console.log(word.search(virgul)); //?  18
+console.log(word.search(nokta)); //? -1
+
+//*----------------------------------
+//* startsWith ,endsWith - case sensitive
+
+let word2 = "Sen gulunce guller acar gul pembe!";
+
+console.log(word2.startsWith("Sen")); //?true
+console.log(word2.startsWith("guluce")); //? false
+console.log(word2.startsWith("gulunce", 4)); //? true
+console.log(word2.endsWith("1")); //? true
+console.log(word2.endsWith("acar", 23));
+
+//*replace (searchFor, replaceWith) --immutable
+
+let oku = "Oku Baban gibi, saf olma, saf olma";
+
+console.log(oku.replace("saf olma", "akilli ol"));
+oku = oku.replace("saf olma", "basarili ol");
+console.log(oku);
+
+oku = oku.replace(/BASARILI/i, "Zengin");
+oku = oku.replace(/saf olma/gi, "Zengin ");
+console.log(oku);
+
+//* ----------------------------------------------------------
+//*  replaceAll() --immutable
+//* ----------------------------------------------------------
+// let degistir = "daglar daglar yol ver gecem..";
+// degisti = degistir.replaceALL("daglar", "Daglar");
+// console.log(degisti);
+
+//* ----------------------------------------------------------
+//*  replaceAll() --immutable
+//* ----------------------------------------------------------
+let degistir = "daglar daglar yol ver gecem..";
+degistir = degistir.replaceAll("daglar", "Dağlar");
+console.log(degistir);
+
+//?Regex de kullanilabilir.
+let degistir2 =
+  "No woman, no cry" +
+  " No woman, no cry, eh, yeah" +
+  " Little darling, don't shed no tears" +
+  " No woman, no cry, eh";
+
+console.log(degistir2.replaceAll(/no/gi, "Hayir"));
+
+const veysel = "Uzun ince bir yoldayim yuruyorum gunduz gece..";
+
+const sliced = veysel.slice(33); //*devamını al
+console.log(sliced, typeof sliced);
+
+console.log(veysel.slice(17, 30));
+console.log(veysel.substring(17, 30));
+console.log(veysel.substring(-10));
+
+const tarkan = "Gel gunduzle gece olalim";
+const spited = tarkan.split("I");
+console.log(splited, typeof splited);
