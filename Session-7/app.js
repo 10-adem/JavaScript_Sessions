@@ -2,14 +2,14 @@
 
 //*ORNEK SILINDIR HACMİ
 
-// const r = +prompt("yaricap giriniz:");
-// const h = +prompt("yukseklik girniz:");
+const r = +prompt("yaricap giriniz:");
+const h = +prompt("yukseklik girniz:");
 
-// const hacimHesapla = (r, h) => Math.PI * r * r * h;
+const hacimHesapla = (r, h) => Math.PI * r * r * h;
 
-// console.log(`${r}, ${h} => Hacmi: ${hacimHesapla(r, h).toFixed(2)}`);
-// console.log(`${r}, ${h} => Hacmi: ${hacimHesapla(r, h).toExponential()}`);
-// console.log(`${r}, ${h} => Hacmi: ${hacimHesapla(r, h).toPrecision()}`);
+console.log(`${r}, ${h} => Hacmi: ${hacimHesapla(r, h).toFixed(2)}`);
+console.log(`${r}, ${h} => Hacmi: ${hacimHesapla(r, h).toExponential()}`);
+console.log(`${r}, ${h} => Hacmi: ${hacimHesapla(r, h).toPrecision()}`);
 
 //*ORNEK: YAS HESAPLAMA
 
@@ -57,17 +57,17 @@
 //* ----------RECURSION-----------
 //*f(n) = f(n-1) + f(n-2)
 
-const fibo = (n) => {
-  if (n <= 0) {
-    return 0;
-  } else if (n === 1 || n === 2) {
-    return 1;
-  } else {
-    return fibo(n - 1) + fibo(n - 2);
-  }
-};
+// const fibo = (n) => {
+//   if (n <= 0) {
+//     return 0;
+//   } else if (n === 1 || n === 2) {
+//     return 1;
+//   } else {
+//     return fibo(n - 1) + fibo(n - 2);
+//   }
+// };
 
-const n = Number(prompt("n terimini giriniz:"));
+// const n = Number(prompt("n terimini giriniz:"));
 
-console.log(`FIBO(${n}) = ${fibo(n)} `);
+// console.log(`FIBO(${n}) = ${fibo(n)} `);
 //   console.log(stringResult);
