@@ -118,3 +118,20 @@ const yazilar = ["Bugun", "hava", "çok", "guzel"];
 const numberArr = [1, 2, 3, 4];
 const conbineArr = yazilar.concat(numberArr, ["aslinda", "cok", "sıcak"]);
 console.log(conbineArr);
+
+const yasArray = [18, 22, 20, 78, 81, 12];
+
+const check = yasArray.every((yas) => yas >= 18);
+check
+  ? console.log("Dizidekilerin yasi 18 den buyuktur")
+  : console.log("Dizide 18 yaş altı var");
+
+const buyuk80 = yasArray.some((yas) => yas >= 80);
+console.log(buyuk80);
+
+const names = ["Ahmet", "Can", "Mustafa", "Merve", "Can"];
+const indis = yasArray.find((yas) => yas >= 30);
+console.log(indis);
+
+const foundIndex = yasArray.findIndex((yas) => yas >= 30);
+console.log(foundIndex);
