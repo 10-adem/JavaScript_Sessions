@@ -9,7 +9,7 @@ console.log(isimler.length);
 const diller = new Array("C++", "javascript", "Assembly", "Go", "Ruby");
 console.log(diller);
 
-const numbers = new Array(3, 2, 1);
+const numbers = new Array(3, 2, 1, 11);
 console.log(numbers);
 
 //! 10 elemanli bos bir Array olusturdu
@@ -82,3 +82,39 @@ console.log(arabalar);
 
 arabalar.reverse();
 console.log(arabalar);
+
+//ascıı koda göre sıraladığından sayıları sıralamak doğru sonuçlar vermez
+numbers.sort();
+console.log(numbers);
+
+numbers.sort((a, b) => a - b);
+console.log(numbers);
+
+const array1 = [1, 2, 3, 4];
+console.log(array1);
+array1.fill(-1, 1);
+console.log(array1);
+
+console.log(array1.includes(4));
+const sayilar1 = [3, 5, 2, "2", "uc", 2, "bes", 5];
+console.log(sayilar1.indexOf(2));
+console.log(sayilar1.lastIndexOf(2));
+
+console.log(sayilar1.join(" "));
+console.log(sayilar1.join());
+console.log(sayilar1);
+
+console.log(sayilar1.toString());
+
+const arabalar1 = ["BMW", "Mercedes", "Fiat", "Anadol"];
+
+const yeniArabalar = arabalar1.slice(2);
+console.log(yeniArabalar, arabalar1);
+
+const yeniArabalar1 = arabalar1.slice(1, 3);
+console.log(yeniArabalar1, arabalar1);
+
+const yazilar = ["Bugun", "hava", "çok", "guzel"];
+const numberArr = [1, 2, 3, 4];
+const conbineArr = yazilar.concat(numberArr, ["aslinda", "cok", "sıcak"]);
+console.log(conbineArr);
