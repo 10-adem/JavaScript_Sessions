@@ -57,29 +57,33 @@ console.log(yaslar);
 
 const arabalar = ["BMW", "Mercedes", "Fiat", "Anadol"];
 
-/*pop()*/
+/*pop()*/ /*Son elemanı siler ve sildiği sildiği elemanı döndürür*/
 
 const silinen = arabalar.pop();
 console.log(arabalar, silinen);
 
+/*Push dizinin sonuna elaman ekler ve son eleman sayısı döndürür */
 const n = arabalar.push("Citroen");
 console.log(arabalar, n);
 
+/*undshift dizinin 0.indeksine eleman ekler ve dizinin son eleman sayısını döndürür */
 const n1 = arabalar.unshift("Audi");
 console.log(arabalar, n1);
 
+/*undshift dizinin 0.indeksindeki elemanı siler ve dizinin son eleman sayısını döndürür */
 const audi = arabalar.shift();
 console.log(arabalar, audi);
 
-// 1.parametre eklenecek indis numarasi
-// 2.parametre 0 ise araya ekleme, 1 ise üzerine yazma
+// 1.parametre: eklenecek indis numarasi
+// 2.parametre: 0 ise araya ekleme, 1 ise üzerine yazma
 // 3.parametre yeni eklenecek veri
 arabalar.splice(1, 0, "passat");
 console.log(arabalar);
 
-arabalar.splice(1, 1, "Jaguar");
+arabalar.splice(1, 1, "Jaguar", "Toyota");
 console.log(arabalar);
 
+/*Dizinin tamamını ters çevirmek istendiğinde kullanılır */
 arabalar.reverse();
 console.log(arabalar);
 
