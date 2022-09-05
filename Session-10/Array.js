@@ -139,3 +139,18 @@ console.log(indis);
 
 const foundIndex = yasArray.findIndex((yas) => yas >= 30);
 console.log(foundIndex);
+
+// salaries
+//   .filter((s) => s < 9000)
+//   .map((s) => Math.trunc(s * 1.1))
+//   .forEach((s) => console.log(s));
+
+const salaries = [5500, 8000, 6500, 9000, 10000, 15000, 25000];
+const sumOfSalaries = salaries.reduce((acc, val) => acc + val, 0);
+
+const sumOfRaisedSalaries = salaries
+  .filter((sal) => sal <= 9000)
+  .map((sal) => Math.trunc(sal * 1.1))
+  .reduce((acc, salary) => acc + salary, 0);
+
+console.log("sumOfRaisedSalarie:", sumOfRaisedSalaries);
