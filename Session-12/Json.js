@@ -56,3 +56,15 @@ console.log(teamUnder22);
 const avgAges =
   team.reduce((sum, person) => (sum += person.age), 0) / team.length;
 console.log(avgAges);
+
+//? DESTRUCTURING(ARRAY)
+
+const car = {
+  name: "BMW",
+  model: 1990,
+  engine: 1.6,
+  colors: ["blue", "purple"],
+};
+
+const { name, colors, model, engine } = car;
+console.log(name, model, engine, colors);
