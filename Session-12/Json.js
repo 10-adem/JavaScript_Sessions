@@ -112,4 +112,21 @@ const personel = {
 const { name, job, ...ageSurname } = personel;
 console.log(ageSurname);
 
+const sum = (x, y) => x + y;
+//* Hata vermez sadece ilk 2 parametreyi toplar
+console.log(sum(1, 2, 3, 4, 5, 6));
+
+const sumAll = (...numbers) => {
+  console.log(numbers);
+};
+
+console.log(sumAll(1, 2, 3, 4));
+
+const showName = (name, suname, ...titles) => {
+  console.log(titles);
+  const summary = '${name} ${surname} is a ${title.join(" and ")}';
+  console.log(summary);
+};
+showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad");
+
 //* SPRED (...)
