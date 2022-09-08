@@ -130,3 +130,22 @@ const showName = (name, suname, ...titles) => {
 showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad");
 
 //* SPRED (...)
+
+const citrus = ["orange", "line"];
+
+const fruits = ["apple", ...citrus, "banana", "chery", "pear"];
+
+console.log(fruits);
+
+//*string spread
+
+let str = "Hello FS12";
+console.log([...str]);
+
+const charArray = [...str];
+
+console.log(charArray, str);
+
+charArray[0] = "X";
+
+console.log(charArray, str);
