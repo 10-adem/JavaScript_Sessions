@@ -149,3 +149,32 @@ console.log(charArray, str);
 charArray[0] = "X";
 
 console.log(charArray, str);
+console.log([...str]);
+
+//Max()- Dizileri fonsksiyonlara acik bir sekilde parametre vermek icin
+
+console.log(Math.max(1, 3, 5, 4, 10));
+const nums = [1, 3, 5, 4, 10];
+console.log(Math.max(nums));
+
+//* Array Copy
+
+const myNumbers = [1, 2, 3];
+const herNumbers = [-1, ...myNumbers, 7];
+const hisNumbers = [...myNumbers];
+
+console.log(herNumbers);
+
+hisNumbers.push(101);
+console.log("MY:", myNumbers, "HIS:", hisNumbers);
+
+console.log(herNumbers);
+
+//* Object Copy
+
+const myObj = { a: 1, b: 2, c: 3 };
+const copiedobj = { ...myObj };
+console.log(copiedobj);
+
+copiedobj.c = "33";
+console.log(copiedobj, myObj);
