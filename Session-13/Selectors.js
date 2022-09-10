@@ -27,3 +27,29 @@ button.style.borderRadius = "10px"; //*borderRadius şeklinde CamelCase olarak v
 button.style.padding = "1rem";
 button.style.fontSize = "1.1rem";
 myInput.style.padding = "1rem";
+
+//*===========================================
+//*          GETELEMENTSBYTAGNAME()
+//*===========================================
+const list = document.getElementsByTagName("li");
+console.log(list); //? HTML Collection
+list[2].style.color = "red";
+
+const elementThree = list.item(3);
+elementThree.style.color = "blue";
+elementThree.textContent = "React / Vue / Angular";
+
+list[4].innerText = "Django / Flask";
+//*EXAMPLE-3
+//*-------------------------------------------
+
+//*===========================================
+//*          GETELEMENTSBYCLASSNAME()
+//*===========================================
+
+//* EXAMPLE-4
+//* ------------------------------------------
+
+//* ========================================
+//*              QUERYSELECTOR()
+//* ========================================
