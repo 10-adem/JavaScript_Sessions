@@ -40,6 +40,13 @@ elementThree.style.color = "blue";
 elementThree.textContent = "React / Vue / Angular";
 
 list[4].innerText = "Django / Flask";
+
+console.log(list[1].textContent);
+console.log(list[1].innerText);
+
+//? HTML kodlarini calitirir.(Güvenlik acisindan problemlidir)
+list[4].innerHTML = "<a href='https://www.clarusway.com'>Clarusway Web</a>";
+
 //*EXAMPLE-3
 //*-------------------------------------------
 
