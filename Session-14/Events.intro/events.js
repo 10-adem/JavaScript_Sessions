@@ -39,3 +39,26 @@ document.getElementById("btn").addEventListener("click", function () {
 
   input.value = "";
 });
+
+//* EXAMPLE-3 (addEventListener())
+//* -------------------------------------------------
+const list = document.querySelectorAll(".list");
+list.forEach((li) => {
+  li.style.transition = "all 0.8s";
+  li.style.lineHeight = "2rem";
+  li.onmouseover = () => {
+    li.style.fontSize = "2rem";
+    li.style.transform = "translateX(10px)";
+  };
+  li.onmouseout = () => {
+    li.style.fontSize = "1rem";
+    li.style.transform = "translateX(-10px)";
+  };
+});
+console.log("list");
+
+//* EXAMPLE-4 (onload)
+//* -------------------------------------------------
+window.onload = function () {
+  document.querySelector("#input").focus();
+};
