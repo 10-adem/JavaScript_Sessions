@@ -24,7 +24,7 @@ h1.addEventListener("click", () => {
 });
 
 //* EXAMPLE-2 (addEventListener())
-//* -------------------------------------------------
+//* ------------------------------------------------
 
 document.getElementById("btn").addEventListener("click", function () {
   const input = document.querySelector("#input");
@@ -42,11 +42,12 @@ document.getElementById("btn").addEventListener("click", function () {
 });
 
 //* EXAMPLE-3 (addEventListener())
-//* -------------------------------------------------
-const list = document.querySelectorAll(".list");
+//* ------------------------------------------------
+const list = document.querySelectorAll(".list"); //? Modelist //?Alternatif yöntemi dah işlevseldir
 list.forEach((li) => {
   li.style.transition = "all 0.8s";
   li.style.lineHeight = "2rem";
+
   li.onmouseover = () => {
     li.style.fontSize = "2rem";
     li.style.transform = "translateX(10px)";
@@ -59,7 +60,7 @@ list.forEach((li) => {
 console.log("list");
 
 //* EXAMPLE-4 (onload)
-//* -------------------------------------------------
+//* ------------------------------------------------
 window.onload = function () {
   document.querySelector("#input").focus();
 };
