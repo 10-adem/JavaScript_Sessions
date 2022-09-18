@@ -14,6 +14,7 @@ let topScore = 0;
 //? CheckBtn basildiginda kontrolleri yap
 document.querySelector(".check-btn").addEventListener("click", () => {
   const guessInput = Number(document.querySelector(".guess-input").value);
+  console.log(guessInput);
   const msg = document.querySelector(".msg");
   const body = document.querySelector("body");
 
@@ -26,15 +27,20 @@ document.querySelector(".check-btn").addEventListener("click", () => {
     //? background = green
     //? eger şuanki skor > topScore
     //?   topScore = score;
+    //? secret_number = görünür
 
     //!değilse
+    //! eger score > 0
     //!! score = score -1
     //? eğer rasgele <input.value
     //?   AZALT
     //? değilse
     //?   ARTTIR
+
+    //! değilse
+    //? Üzgünüz kaybettiniz.
   } else if (randomNumber === guessInput) {
-    msg.innerHTML = `Congrats You Win <i class="fa-solid fa-face-grin-hearts fa-2x"></i> `;
+    msg.innerHTML = `Congrats You Win <i class="fa-solid fa-face-grin-hearts fa-2x"></i>`;
     body.className = "bg-success";
     if (score > topScore) {
       topScore = score;
@@ -73,4 +79,3 @@ document.querySelector(".check-btn").addEventListener("click", () => {
 //? Uzgunuz kaybetiniz.
 
 //* againBtn basildiginda kontrolleri yap
-document.querySelector("");
