@@ -15,8 +15,6 @@ const renderSavedTodos = () => {
   });
 };
 
-renderSavedTodos();
-
 addBtn.addEventListener("click", () => {
   if (todoInput.value.trim() === "") {
     alert("Please enter new todo");
