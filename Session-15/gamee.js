@@ -9,6 +9,8 @@ let score = 10;
 //? LocalStorage'de topScore adiyla bir degisken olusturur.
 
 let topScore = localStorage.getItem("topScore") || 0;
+
+//? DOM'daki top-score değerlerini LocalStorage'den  okuyarak güncelle
 document.querySelector(".top-score").textContent = topScore;
 
 //? CheckBtn basildiginda kontrolleri yap
@@ -85,13 +87,19 @@ document.querySelector(".check-btn").addEventListener("click", () => {
 document.querySelector(".again-btn").addEventListener("click", () => {
   score = 10;
   document.querySelector(".score").textContent = score;
-  let randomNumber = Math.round(Math.random() * 100);
+  randomNumber = Math.round(Math.random() * 100);
   document.querySelector(".secret-number").textContent = "?";
   console.log(randomNumber);
   document.querySelector(".check-btn").disabled = false;
   document.querySelector("body").classList.remove("bg-success", "bg-danger");
   document.querySelector(".guess-input").value = "";
   document.querySelector(".msg").innerText = "Starting..";
+});
+
+document.querySelector(".guess-input").addEventListener("keydown", (e) => {
+  if (e.code === "Enter") {
+    document.querySelector(".check-btn").click();
+  }
 });
 
 //LOCALSTORAGE-SESSİONSTORAGE
