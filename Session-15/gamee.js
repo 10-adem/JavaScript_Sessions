@@ -1,15 +1,15 @@
-//* =====================================
-//*  GUESS MY NUMBER
-//*  Game Logic
-//*======================================
-
 //? 1-100 arasinda rasgele bir sayi tut.
 let randomNumber = Math.round(Math.random() * 100);
 console.log(randomNumber);
 
 //? Variables
 let score = 10;
-let topScore = 0;
+// let topScore = 0;
+
+//? LocalStorage'de topScore adiyla bir degisken olusturur.
+
+let topScore = localStorage.getItem("topScore") || 0;
+document.querySelector(".top-score").textContent = topScore;
 
 //? CheckBtn basildiginda kontrolleri yap
 document.querySelector(".check-btn").addEventListener("click", () => {
@@ -43,9 +43,10 @@ document.querySelector(".check-btn").addEventListener("click", () => {
     msg.innerHTML = `Congrats You Win <i class="fa-solid fa-face-grin-hearts fa-2x"></i>`;
     body.className = "bg-success";
     document.querySelector(".check-btn").disabled = true;
-    if (score > topScore) {
-      topScore = score;
-      document.querySelector(".top-score").textContent = topScore;
+    if (score >= topScore) {
+      // topScore = score;
+      localStorage.setItem("topScore", score);
+      document.querySelector(".top-score").textContent = score;
     }
     document.querySelector(".secret-number").textContent = randomNumber;
   } else {
@@ -92,3 +93,11 @@ document.querySelector(".again-btn").addEventListener("click", () => {
   document.querySelector(".guess-input").value = "";
   document.querySelector(".msg").innerText = "Starting..";
 });
+
+//LOCALSTORAGE-SESSİONSTORAGE
+// myObj = { a: 1, b: 2, c: 3 };
+// localStorage.setItem("OBJ", JSON.stringify(myObj));
+// const readObj = localStorage.getItem("OBJ");
+// const readOBJ = JSON.parse(localStorage.getItem("OBJ"));
+// console.log(typeof readObj);
+// console.log(typeof readOBJ);
