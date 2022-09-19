@@ -7,6 +7,16 @@ const addBtn = document.getElementById("todo-button");
 const todoInput = document.getElementById("todo-input");
 const todoUl = document.getElementById("todo-ul");
 
+let todos = JSON.parse(localStorage.getItem("TODOS"));
+
+const renderSavedTodos = () => {
+  todos.forEach((todo) => {
+    createListElement(todo);
+  });
+};
+
+renderSavedTodos();
+
 addBtn.addEventListener("click", () => {
   if (todoInput.value.trim() === "") {
     alert("Please enter new todo");
@@ -17,6 +27,11 @@ addBtn.addEventListener("click", () => {
       text: todoInput.value,
     };
     createListElement(newTodo);
+
+    todos.push(newTodo);
+
+    localStorage.setItem("TODOS", JSON.stringify(todos));
+    console.log(todos);
     todoInput.value = "";
   }
 });
@@ -48,6 +63,9 @@ todoUl.addEventListener("click", (e) => {
   console.log(e.target);
   if (e.target.classList.contains("fa-trash")) {
     e.target.parentElement.remove();
+  }
+  if (e.target.classList.contains("fa-check")) {
+    e.target.parentElement.classList.toggle("checked");
   }
 });
 
