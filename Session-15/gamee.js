@@ -4,7 +4,7 @@
 //*======================================
 
 //? 1-100 arasinda rasgele bir sayi tut.
-const randomNumber = Math.round(Math.random() * 100);
+let randomNumber = Math.round(Math.random() * 100);
 console.log(randomNumber);
 
 //? Variables
@@ -42,6 +42,7 @@ document.querySelector(".check-btn").addEventListener("click", () => {
   } else if (randomNumber === guessInput) {
     msg.innerHTML = `Congrats You Win <i class="fa-solid fa-face-grin-hearts fa-2x"></i>`;
     body.className = "bg-success";
+    document.querySelector(".check-btn").disabled = true;
     if (score > topScore) {
       topScore = score;
       document.querySelector(".top-score").textContent = topScore;
@@ -78,4 +79,16 @@ document.querySelector(".check-btn").addEventListener("click", () => {
 //! degise
 //? Uzgunuz kaybetiniz.
 
-//* againBtn basildiginda kontrolleri yap
+//* againBtn basildiginda oyunun baslangic buttonlarını kur
+
+document.querySelector(".again-btn").addEventListener("click", () => {
+  score = 10;
+  document.querySelector(".score").textContent = score;
+  let randomNumber = Math.round(Math.random() * 100);
+  document.querySelector(".secret-number").textContent = "?";
+  console.log(randomNumber);
+  document.querySelector(".check-btn").disabled = false;
+  document.querySelector("body").classList.remove("bg-success", "bg-danger");
+  document.querySelector(".guess-input").value = "";
+  document.querySelector(".msg").innerText = "Starting..";
+});
