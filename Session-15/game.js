@@ -48,16 +48,16 @@ document.querySelector(".check-btn").addEventListener("click", () => {
     }
     document.querySelector(".secret-number").textContent = randomNumber;
   } else {
-    if (score > 1) {
-      score--;
-
+    score--;
+    if (score > 0) {
       guessInput > randomNumber
-        ? (msg.innerText = "DECREASE")
-        : (msg.innerText = "INCREASE");
+        ? (msg.innerHTML = `<i class="fa-solid fa-arrow-trend-down"></i> DECREASE`)
+        : (msg.innerHTML = `<i class="fa-solid fa-arrow-trend-up"></i> INCREASE`);
     } else {
-      score--;
-      msg.innerText = "You Lost";
-      document.querySelector(".check-btn").style;
+      msg.innerHTML = `You Lost <i class="fa-regular fa-face-sad-tear fa-2x"></i> `;
+      document.querySelector(".secret-number").textContent = randomNumber;
+      body.className = "bg-danger";
+      document.querySelector(".check-btn").disabled = true;
     }
 
     document.querySelector(".score").textContent = score;
