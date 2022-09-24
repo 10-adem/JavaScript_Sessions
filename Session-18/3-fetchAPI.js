@@ -17,3 +17,13 @@ fetch("https://api.github.com/users")
   .then((res) => res.json())
   .then((data) => console.log(data))
   .catch(() => console.log("Something went wrong"));
+
+var v = 1;
+var f1 = function () {
+  console.log(v);
+};
+var f2 = function () {
+  var v = 2;
+  f1();
+};
+f2();
