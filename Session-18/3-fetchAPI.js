@@ -11,19 +11,31 @@
 //? bir parametre almaktadir ve bu istegin cevabini gosteren bir Promise dondurmektedir.
 
 console.log("FETCH");
+let userData;
 
 fetch("https://api.github.com/users")
   //   .then((res) => console.log(res))
-  .then((res) => res.json())
-  .then((data) => console.log(data))
-  .catch(() => console.log("Something went wrong"));
+  .then((res) => {
+    // console.log(res);
+    if (!res.ok) {
+      throw new Error("Something went wrong");
+    }
+    return res.json();
+  })
 
-var v = 1;
-var f1 = function () {
-  console.log(v);
+  .then((data) => updateDOM(data))
+  .catch((hata) => console.log(hata));
+
+const updateDOM = (users) => {
+  console.log(users);
+  const userDiv = document.querySelector(".users");
+
+  users.forEach((user) => {
+    const { login, avatar_url, following_url } = user; //soldakileri user içerisinden çek
+    userDiv.innerHTML += `<h2>${login}</h2>
+    <img src="${avatar_url}" witdh = "300px" alt=""/>
+
+  
+  `;
+  });
 };
-var f2 = function () {
-  var v = 2;
-  f1();
-};
-f2();
