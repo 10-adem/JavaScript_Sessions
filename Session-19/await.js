@@ -1,3 +1,4 @@
+let isError = false;
 const getNews = async function () {
   const API_KEY = "d610f87f486f4f2c892578c04e1dc385";
   const url =
@@ -6,17 +7,41 @@ const getNews = async function () {
   try {
     const res = await fetch(url);
     if (!res.ok) {
+      isError = true;
       //   throw new Error(`Somethind wen wrong ${res.status}`);
     }
     const data = await res.json();
     // console.log(data.articles);
-    randerNews(data.articles);
+    renderNews(data.articles);
   } catch (error) {
     console.log(error);
   }
 };
 
-const randerNews = (news) => {
-  console.log(news);
+const renderNews = (news) => {
+  const newsList = document.getElementById("news-list");
+  if (isError) {
+    newsList.innerHTML += `
+        <h2>News Can not be fetched</h2>
+        <img src="./img/404.png" alt="" />
+      `;
+    return;
+  }
+  news.forEach((item) => {
+    const { title, description, urlToImage, url } = item; //! dest
+    newsList.innerHTML += `
+    <div class="col-md-6 col-lg-4 col-xl-3">
+      <div class="card">
+        <img src="${urlToImage}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${title}</h5>
+          <p class="card-text">${description}</p>
+          <a href="${url}" target="_blank" class="btn btn-danger">Details</a>
+        </div>
+      </div>
+    </div>
+    `;
+  });
 };
+
 window.addEventListener("load", getNews);
