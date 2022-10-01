@@ -49,6 +49,9 @@ class Book {
   setId(id) {
     this.#id = id;
   }
+  computeAge() {
+    return new Date().getFullYear() - this.#id.year;
+  }
 }
 
 const book1 = new Book("Simyaci", "Poelho Coelgo", 1988);
