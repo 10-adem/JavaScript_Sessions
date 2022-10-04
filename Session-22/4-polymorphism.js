@@ -26,9 +26,9 @@ class Book {
   getSummary() {
     return `${this.title} was writtten by ${this.author} in ${this.year}`;
   }
-  setPrice() {
+  setPrice(price) {
     const taxRate = 1.1;
-    this.price = price * taxRate;
+    this.price = Math.trunc(price * taxRate);
   }
 }
 
@@ -40,7 +40,7 @@ class Magazine extends Book {
     this.month = month;
   }
   //! Overrided Metot (Parent class'daki bir metodun farkli
-  //! fonksiyonellikle fakat ayni isimle tanimlanmasi)
+  //! fonksiyonellikle ve ayni parametre listesi ile yeniden tanimlanmasi)
   getSummary() {
     return `${this.title} was writtten by ${this.author} in ${this.year} in ${this.month}`;
   }
@@ -49,6 +49,7 @@ class Magazine extends Book {
   getSummaryParent() {
     return super.getSummary();
   }
+  //! Overloaded Metot (Ayni metodun farkli parametreler ile kullanilmasi)
   setPrice(price, taxRate = 1.1) {
     this.price = Math.trunc(price * taxRate);
   }
@@ -61,20 +62,21 @@ console.log(mag1.getSummaryParent());
 
 const book1 = new Book("Simyaci", "Paulo Coelgo", "1988");
 console.log(book1);
-// book1.setPrice(100);
-// console.log(book1);
+book1.setPrice(100);
+console.log(book1);
 
 mag1.setPrice(50);
 console.log(mag1);
 
 // //? JS' de overloading, parent-child class arasinda kullanilabilir.
+//? Ancak diğer bir çok dilde ayni metot ayni class içerisinde de farklı parametrelerle tekrar tekrar yazilabilir.
 
+// //? overLoading
 // function x(string a, string b){
 //   return a + b
 // }
 
-// //? overLoading
-// function x(a, b) {
+// function x(integer a, integer b) {
 //   return a + b;
 // }
 // x(1, 2);
