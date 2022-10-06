@@ -30,6 +30,7 @@ class Book {
     this.author = author;
     this.title = title;
     this.year = year;
+    this.#id = "44";
 
     this.getTitle = function () {
       return this.title;
@@ -49,14 +50,22 @@ class Book {
   setId(id) {
     this.#id = id;
   }
-  computeAge() {
-    return new Date().getFullYear() - this.#id.year;
+
+  getSummary() {
+    return `${this.title} was writtten by ${
+      this.author
+    } so its age is  ${this.#computeAge()}`;
+  }
+
+  //!private metot tanimlanmasi
+  #computeAge() {
+    return new Date().getFullYear() - this.year;
   }
 }
 
 const book1 = new Book("Simyaci", "Poelho Coelgo", 1988);
 
-console.log(book1.title);
+console.log(book1.getId());
 
 //? Private bir degiskenin degeri class disindan dogrudan okunamaz.
 // console.log(book1.#id);
@@ -71,3 +80,9 @@ console.log(book1.getId());
 //? Private degiskene deger atama
 book1.setId("00000");
 console.log(book1.getId());
+
+//! private metotlardan tanimlandiklari class disindan erisilemezler.
+//! Ancak class icerisindeki herhangi bir metottan erisilebilir.
+// console.log(book1.#computeAge());
+
+console.log(book1.getSummary());
