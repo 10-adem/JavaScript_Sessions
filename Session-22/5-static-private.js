@@ -24,17 +24,24 @@
 //! Private metotlara ancak class icerisindeki diger metotlar ile erisilebilir.
 
 class Book {
-  //? Private property
+  //! Private property
   #id = "123456";
+
+  //!static property tanimlamasi
+  static counter = 0;
+
   constructor(title, author, year) {
     this.author = author;
     this.title = title;
     this.year = year;
-    this.#id = "44";
 
+    this.#id = "44";
     this.getTitle = function () {
       return this.title;
     };
+
+    //*static degiskenin degerini degistirme
+    Book.counter++; //! className.propertName
   }
 
   //? Class icerisinde public metotlar yardimiyla private degiskenler okunabilir.
@@ -61,6 +68,11 @@ class Book {
   #computeAge() {
     return new Date().getFullYear() - this.year;
   }
+
+  //? static method
+  static compareAge(b1, b2) {
+    return `Books age difference: ${b1.year - b2.year}`;
+  }
 }
 
 const book1 = new Book("Simyaci", "Poelho Coelgo", 1988);
@@ -86,3 +98,14 @@ console.log(book1.getId());
 // console.log(book1.#computeAge());
 
 console.log(book1.getSummary());
+
+const book2 = new Book("ABC", "Poelho Coelgo", 1998);
+const book3 = new Book("XYZ", "Poelho Coelgo", 1988);
+
+//! static degiskenlere class üzerinden erisilebilir.
+console.log(Book.counter);
+
+//! instance lar üzerinden static degiskenlere erisilemez.
+// console.log(Book1.counter);
+
+console.log(Book.compareAge(book2, book3));
